@@ -1,0 +1,81 @@
+<div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems, null);
+        console.log("Modal loaded")
+    });
+
+    </script>
+    <div class="card">
+            <div class="row">
+                <div class="col s6"><h4>Farmer list</h4></div>
+                <div class="col s6" style = "text-align: right">
+                        <a class="btn-floating btn-large waves-effect waves-light red modal-trigger" href="#modal_add"><i class="material-icons">add</i></a>
+                </div>
+            </div>
+            <table class = "responsive-table ">
+                <thead style = "background: #D32F2F; color: #ffff">
+                    <th>Farmer Name</th>
+                    <th>Feeder Line</th>
+                    <th>Mobile Number</th>
+                    <th>Current Crop</th>
+                    <th>Land Size</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Prasanna</td>
+                        <td>1</td>
+                        <td>9611818690</td>
+                        <td>Rice, Wheat</td>
+                        <td>12 acre</td>
+                    </tr>
+                    <tr>
+                        <td>Nikil</td>
+                        <td>2</td>
+                        <td>934354445454</td>
+                        <td>Wheat, Rice</td>
+                        <td>10 acre</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div id = "modal_add" class="modal">
+                <div class="container" style="margin: 40px auto; padding: 20px">
+                    <form>
+                        <div style="margin: 10px auto; padding: 10px">
+                            <h3>Enter the farmer details </h3>
+                        </div>
+                        <div class="input-field">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" class="validate" id="name"/>
+                        </div>
+                        <div class="input-field">
+                                <label for="location">Location</label>
+                                <input type="text" name="location" class="validate" id="location"/>
+                        </div>
+                        <div class="input-field">
+                                <label for="acres">Acres</label>
+                                <input type="number" name="acres" class="validate" id="acres"/>
+                        </div>
+                        <div class="input-field">
+                                <label for="crop">Crop</label>
+                                <input type="text" name="crop" class="validate" id="crop"/>
+                        </div>
+                        <div class="input-field">
+                                <label for="pumps">Pumps</label>
+                                <input type="number" name="pumps" class="validate" id="pumps"/>
+                        </div>
+                        <div class="input-field">
+                                <label for="address">Address</label>
+                                <textarea name="address" id="address" class="validate"></textarea>
+                        </div>
+                        <div style="margin: 20px auto; padding: 10px">
+                            <button class="btn" type="submit">Submit</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+    </div>
+</div>
